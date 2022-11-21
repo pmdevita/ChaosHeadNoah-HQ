@@ -2,18 +2,17 @@
 
 A higher quality assets patch for the Switch/Steam release of Chaos;Head.
 
-## Background
-
 Not only is the English release of Chaos;Head poorly localized and rife with bugs, the assets  
-have been severely or improperly compressed, especially on the Switch version. This patch aims 
-to fix these issues with a few subprojects
+have been severely or improperly compressed. This patch aims 
+to fix these issues with a few subprojects.
 
 ## Cutscene Re-encoding
 
 In both the Steam and Switch release, the cutscenes are presented in 1080p, upscaled from the original 
-720p release. However, they are heavily compressed, to such a degree that they are actually lower quality 
+720p. However, they are heavily compressed, to such a degree that they are actually lower quality 
 than the originals. To fix this, we need to upscale the original videos from the X360 release
-and insert them into both the Steam and Switch release.
+and insert them into both the Steam and Switch release. We're going to attempt to do an AI upscale 
+to try to and improve the quality a bit more over a simple rescale.
 
 ## BG Image Re-encoding
 
@@ -24,7 +23,7 @@ compress them for the Switch and Steam release.
 ## Switch Audio Re-encoding
 
 Nintendo provides an Opus encoder as part of their SDK for the Switch. For some horrifying reason,
-they wrote their own encoder, and it's [worse than the open source reference one.](https://twitter.com/masagratordev/status/1571210220696702977).
+they wrote their own encoder, and it's [worse than the open source reference one](https://twitter.com/masagratordev/status/1571210220696702977).
 To fix this, we can re-encode the voice lines and music from the Steam release again for the 
 Switch release with a [modified Opus encoder](https://github.com/pmdevita/NXAEncode_ChaosHead) that writes out Nintendo's format.
 
@@ -43,6 +42,6 @@ with Docker and own an Nvidia GPU, I could also use some help with upscaling the
 # Compatibility with the Committee of Zero Patch
 
 CoZ's patch isn't released at the moment, so I'm not entirely sure what the situation will look like. But,
-the aim is for this patch to be compatible with CoZ's patch. The one potential point of friction might be 
-with videos that CoZ has subtitled 
-
+the aim is for this patch to be compatible. The one potential point of friction might be 
+with videos that CoZ has subtitled, we'll either need to remake the subs on our own or look into 
+some kind of collaboration.
