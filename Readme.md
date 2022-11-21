@@ -20,6 +20,15 @@ Similarly to the cutscenes, the background images have also been upscaled and th
 a point where the original Xbox assets look better. We need to redo the upscale and then properly 
 compress them for the Switch and Steam release.
 
+It's a bit difficult to demonstrate in a Readme, but if you zoom into both of these images, you'll notice a lot more 
+blocking in the Switch version than the Xbox one. The Xbox image has a smoother gradient.
+
+The Xbox images are smaller because it uses smaller images. The cuts are done proportionally.
+
+| Xbox                                 |Switch|
+|--------------------------------------|---|
+| ![Xbox BG 1](comparisons/1_xbox.png) |![Switch BG 1](comparisons/1_switch.png)|
+
 ## Switch Audio Re-encoding
 
 Nintendo provides an Opus encoder as part of their SDK for the Switch. For some horrifying reason,
