@@ -2,32 +2,62 @@
 
 A higher quality assets patch for the Switch/Steam release of Chaos;Head.
 
-Not only is the English release of Chaos;Head poorly localized and rife with bugs, the assets  
-have been severely or improperly compressed. This patch aims 
-to fix these issues with a few subprojects.
+Not only is the English release of Chaos;Head NOAH poorly localized and rife with bugs, the assets  
+have been severely and improperly compressed. The most noticeable example is the videos and background 
+images. The Switch/Steam release is in 1080p, which should have been
+an improvement over the original 720p Xbox 360 release. However, there is so much artifacting in the 
+images and videos that the perceived quality is actually lower.
+This patch aims to fix these issues with a few subprojects.
 
 ## Cutscene Re-encoding
 
-In both the Steam and Switch release, the cutscenes are presented in 1080p, upscaled from the original 
-720p. However, they are heavily compressed, to such a degree that they are actually lower quality 
-than the originals. To fix this, we need to upscale the original videos from the X360 release
-and insert them into both the Steam and Switch release. We're going to attempt to do an AI upscale 
-to try to and improve the quality a bit more over a simple rescale.
+We need to match up the original Xbox cutscenes with the corresponding Switch and Steam files, 
+then rescale to 1080p and properly transcode the result. We're going to attempt to do an AI upscale 
+to try to and improve the quality a bit more over a simple rescale, you can see some notes about 
+that in the [transcoding notes](docs/transcode_notes.md).
+
+### Examples
+
+The opening cutscene is particularly garish. In general, the visual difference between the 
+Switch and Steam release is minimal, so they will be used interchangeably in comparisons.
+The Xbox images are smaller because it uses smaller images, the cuts are done proportionally.
+
+There are also some slight changes in color, I'll have to double-check if I messed up the color space.
+
+For this one, notice how the details for the light rays are completely mushed. The hand has 
+also been reduced to a single shade of white.
+ 
+| Xbox                                         | Switch/Steam                                    |
+|----------------------------------------------|-------------------------------------------------|
+| ![Xbox BG 1](comparisons/mv_1_xbox_crop.png) | ![Switch BG 1](comparisons/mv_1_steam_crop.png) |
+
+There is some banding here too on the Xbox version, but it's far blockier on the Switch/Steam.
+
+| Xbox                                         | Switch/Steam                                    |
+|----------------------------------------------|-------------------------------------------------|
+| ![Xbox BG 2](comparisons/mv_2_xbox_crop.png) | ![Switch BG 2](comparisons/mv_2_steam_crop.png) |
+
+Both of these are bad but the Switch/Steam version has far steeper jumps in the gradient.
+
+| Xbox                                    | Switch/Steam                                |
+|-----------------------------------------|---------------------------------------------|
+| ![Xbox BG 4](comparisons/mv_4_xbox.png) | ![Switch BG 4](comparisons/mv_4_steam.png) |
+
+
 
 ## BG Image Re-encoding
 
-Similarly to the cutscenes, the background images have also been upscaled and then heavily compressed, to 
-a point where the original Xbox assets look better. We need to redo the upscale and then properly 
-compress them for the Switch and Steam release.
+Similarly to the cutscenes, we need to match all of the image files up and then upscale and
+re-encode them. We'll also be attempting an AI upscale with this as well.
 
-It's a bit difficult to demonstrate in a Readme, but if you zoom into both of these images, you'll notice a lot more 
-blocking in the Switch version than the Xbox one. The Xbox image has a smoother gradient.
+It's a bit difficult to demonstrate in a Readme, especially in light mode, but if you zoom into both of these images, you'll notice a lot more 
+blocking in the Switch version than the Xbox one. The Xbox image has a smoother gradient. I'm working on pulling out more examples.
 
-The Xbox images are smaller because it uses smaller images. The cuts are done proportionally.
+### Examples
 
-| Xbox                                 |Switch|
-|--------------------------------------|---|
-| ![Xbox BG 1](comparisons/1_xbox.png) |![Switch BG 1](comparisons/1_switch.png)|
+| Xbox                                 | Switch/Steam                             |
+|--------------------------------------|------------------------------------------|
+| ![Xbox BG 1](comparisons/1_xbox.png) | ![Switch BG 1](comparisons/1_switch.png) |
 
 ## Switch Audio Re-encoding
 
