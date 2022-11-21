@@ -4,6 +4,8 @@ import json
 from utils import zero_pad
 from ffmpeg import ffmpeg, HardwareDecode, ffprobe
 
+# Convert the XBOX 360 NGS files and fix the aspect ratio for some of them
+
 p = Path(r"D:\Users\pmdevita\Downloads\Chaos;Head Noah\dx")
 
 for root, folders, files in os.walk(p):
