@@ -1,4 +1,3 @@
-C:\Runtimes\Python39\python.exe "E:/pmdevita/Videos/Film/CH HQ/scripts/print_file_names.py"
 _nobg.webp
 bbs_02_039a.webp
 bbs_05_094a.webp
