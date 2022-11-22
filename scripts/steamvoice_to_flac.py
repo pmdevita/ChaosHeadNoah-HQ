@@ -1,8 +1,9 @@
 import os
 from pathlib import Path
 from ffmpeg import ffmpeg
+from asset_paths import steam_bgm
 
-p = Path(r"D:\SteamLibrary\steamapps\common\CHAOS;HEAD NOAH\Data\voice")
+p = steam_bgm
 
 # The CRID USM extractor in VGMToolbox adds this extra number on the filenames, ID0000_XXXXXXX.ext
 vid_number = 40534656
