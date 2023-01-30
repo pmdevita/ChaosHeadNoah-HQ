@@ -1,0 +1,7 @@
+version: '3'
+
+services:
+  vsgan_tensorrt:
+    volumes:
+      - ./:/workspace/tensorrt
+      - /path/to/extracted/xbox:/xbox
