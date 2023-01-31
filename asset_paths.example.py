@@ -16,7 +16,9 @@ steam_bgm = steam_base / "bgm"
 # Extracted Xbox archives
 xbox_bgm = xbox_base / "bgm"
 xbox_bg = xbox_base / "cg" / "bg"
+xbox_mv1 = xbox_base / "dx1"
+xbox_mv2 = xbox_base / "dx2"
 
 # Switch romfs folders
 switch_bgm = switch_base / "bgm"
-
+switch_mv = switch_base / "movie"
