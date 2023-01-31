@@ -1,4 +1,4 @@
-[submodule "scripts/scripts/VSGAN-tensorrt-docker"]
-	path = scripts/scripts/VSGAN-tensorrt-docker
+[submodule "scripts/VSGAN-tensorrt-docker"]
+	path = scripts/VSGAN-tensorrt-docker
 	url = https://github.com/pmdevita/VSGAN-tensorrt-docker.git
-	branch = chhq
+    branch = chhq
