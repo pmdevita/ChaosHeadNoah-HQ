@@ -8,7 +8,9 @@ xbox_base = Path(r"C:\Chaos;Head Noah")
 # Steam CHAOS;HEAD NOAH/Data folder
 steam_base = Path(r"C:\Program Files (x86)\Steam\steamapps\common\CHAOS;HEAD NOAH\Data")
 # Path to Yuzu dump romfs folder
-switch_base = Path(r"C:\Users\pmdevita\AppData\Roaming\yuzu\dump\0100C17017CBC000\romfs")
+switch_base = Path(r"C:\Users\username\AppData\Roaming\yuzu\dump\0100C17017CBC000\romfs")
+# Shared Output Assets (this was synced between collaborators with Resilio Sync)
+assets_base = Path(r"C:\CHNoahAssets")
 
 # Extracted Steam archives
 steam_bgm = steam_base / "bgm"

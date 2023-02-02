@@ -31,7 +31,7 @@ To get Docker running I had to install nvidia-container-toolkit (I'm using Linux
 Extract the model folder into the VSGAN working directory. At the moment, we have to use vs-trt to use it because 
 VSGAN is broken, so run this to convert to an engine
 ```commandline
-rtexec --fp16 --onnx=sudo_RealESRGAN2x_Dropout_3.799.042_opset16.onnx --minShapes=input:1x3x8x8 --optShapes=input:1x3x720x1280 --maxShapes=input:1x3x1080x1920 --saveEngine=model.engine --tacticSources=+CUDNN,-CUBLAS,-CUBLAS_LT --buildOnly
+trtexec --fp16 --onnx=sudo_RealESRGAN2x_Dropout_3.799.042_opset16.onnx --minShapes=input:1x3x8x8 --optShapes=input:1x3x720x1280 --maxShapes=input:1x3x1080x1920 --saveEngine=model.engine --tacticSources=+CUDNN,-CUBLAS,-CUBLAS_LT --buildOnly
 ```
 
 Turn on vs-trt in the inference_config as well as color matching. Then change inference.py to load the correct video.
