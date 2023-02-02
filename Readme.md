@@ -88,4 +88,4 @@ with Docker and own an Nvidia GPU, I could also use some help with upscaling the
 CoZ's patch isn't released at the moment, so I'm not entirely sure what the situation will look like. But 
 compatibility should be pretty straightforward as we just need to replace assets. The one point of friction 
 might be with CoZ's subtitles, we'll either need to reconstruct them ourselves or arrange some kind of 
-collaboration. If are working with CoZ, please reach out to me, I'd love to get this included in the patch.
+collaboration. If you are working with CoZ, please reach out to me, I'd love to get this included in the patch.
