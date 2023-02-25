@@ -5,7 +5,7 @@ from ffmpeg import ffmpeg
 
 p = Path(r"D:\SteamLibrary\steamapps\common\CHAOS;HEAD NOAH\Data\movie_eng")
 
-# The CRID USM extractor in VGMToolbox adds this extra number on the filenames, ID0000_XXXXXXX.ext
+# The CRID USM extractor (video demultiplexer) in VGMToolbox adds this extra number on the filenames, ID0000_XXXXXXX.ext
 vid_number = 40534656
 aud_number = 40534641
 

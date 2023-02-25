@@ -2,11 +2,27 @@
 
 A higher quality assets patch for the Switch/Steam release of Chaos;Head.
 
-Not only is the English release of Chaos;Head NOAH poorly localized and rife with bugs, the video assets  
+Not only is the English release of Chaos;Head NOAH poorly localized and rife with bugs, the video assets 
 have been severely and improperly compressed. The Switch/Steam release is in 1080p, which should have been
 an improvement over the original 720p Xbox 360 release. However, there is so much artifacting in the 
-images and videos that the perceived quality is actually lower.
-This patch aims to fix this issue, as well as to investigate the quality of other media assets in the game.
+images and videos that the perceived quality is actually lower. This patch aims to fix this issue, as well as to 
+investigate the quality of other media assets in the game.
+
+# Status
+
+## Tech
+
+Right now, the project is in a standstill as we try to insert videos into the PC release. We're unable to get the 
+game to play back H264 video, and there's not much sense in encoding it into MPEG2, as the videos are originally in 
+the game. Please open an issue if you can help with this or DM me ptrharmonic#9765.
+
+## Upscale
+
+We've been focused on the opening cutscene, mvinter01, as the test run before we move on to other videos. We have a 
+decent upscale of the cutscene, but it needs some additional editing to improve areas where the ML upscale was lacking. 
+We're trying to figure out the tech problems first so we can just focus on the upscale afterwards.
+
+# Projects
 
 ## Cutscene Upscale
 
@@ -53,6 +69,10 @@ Both of these are bad but the Switch/Steam version has far steeper jumps in the 
 | ![Xbox BG 4](comparisons/mv_4_xbox.png) | ![Switch BG 4](comparisons/mv_4_steam.png) |
 
 
+### Images/Audio
+
+<details>
+<summary>Image and audio subprojects, further research required to decide if necessary</summary>
 
 ## BG Image Re-encoding
 
@@ -74,7 +94,7 @@ However, in a blind test, I was unable to distinguish the Switch and Steam voice
 that Nintendo had updated their Opus encoder while I was 
 [writing my own to fit their new format in C;H](https://github.com/pmdevita/NXAEncode_ChaosHead), so perhaps 
 they have fixed the issue.
-
+</details>
 
 # Contributing/Help
 
@@ -85,7 +105,18 @@ with Docker and own an Nvidia GPU, I could also use some help with upscaling the
 
 # Compatibility with the Committee of Zero Patch
 
-CoZ's patch isn't released at the moment, so I'm not entirely sure what the situation will look like. But 
-compatibility should be pretty straightforward as we just need to replace assets. The one point of friction 
-might be with CoZ's subtitles, we'll either need to reconstruct them ourselves or arrange some kind of 
-collaboration. If you are working with CoZ, please reach out to me, I'd love to get this included in the patch.
+In short, yes. It would be nice to get this included in the patch so please DM me CoZ ptrharmonic#
+
+## Switch
+
+The Switch versions of the cutscenes need to have their subtitles baked in. These can be obtained from the PC release 
+of CoZ's patch. 
+
+This is as simple as copying this patch's files over CoZ's, replacing corresponding files.
+
+## PC
+
+This one is a bit more involved. We can replace the videos inside CoZ's CPK package, but it might be more viable to 
+make our own CPK file and then patch the language barrier json to use our files. Installing 
+
+
